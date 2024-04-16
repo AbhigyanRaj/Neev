@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="Neev.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page" id="page1">
+        
+        <div class="Heading"></div>
+
+        <style>
+            .Heading h2 {
+              overflow: hidden; /* Ensures the content is not revealed until the animation */
+              border-right: .08em solid rgb(255, 255, 255); /* The typewriter cursor */
+              white-space: nowrap; /* Keeps the content on a single line */
+              margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+              
+              animation: 
+                typing 2.9s steps(40, end),
+                blink-caret 1.5s step-end infinite;
+              
+              /* Responsive font size */
+              font-size: 47px; /* Increased font size */
+            }
+            
+            /* The typing effect */
+            @keyframes typing {
+              from { width: 0 }
+              to { width: 100% }
+            }
+            
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+              from, to { border-color: transparent }
+              50% { border-color: rgb(216, 156, 36); }
+            }
+        
+            @media (max-width: 768px) {
+              .Heading h2 {
+                font-size: 28px; /* Adjusted font size for smaller screens */
+              }
+            }
+        
+            @media (max-width: 480px) {
+              .Heading h2 {
+                font-size: 20px; /* Further reduced font size for smaller screens */
+              }
+            }
+        </style>
+        
+        
+          
+          <div class="Heading">
+            <h2><span class="highlight">नमस्कार&nbsp;&nbsp;&nbsp;</span>Hustler</h2>
+          </div>
+          
+
+
+
+----                                                                                                                                                  
+
+
+          <video src="Animated.mp4" autoplay loop muted></video>
+
+        <img src="Neev.png" alt="logo">
+
+        <div class="menu-links">
+            <li><a href="#page1">Home</a></li>
+            <li><a href="#page2">Scheme</a></li>
+            <li><a href="#page3">Mentors</a></li>
+            <li><a href="#page4">Events</a></li>
+        </div>
+
+        <div class="menu-links2">
+            <li><a href="main.html">Login</a></li>
+        </div>
+    </div>
+
+    <div class="page" id="page2"></div>       //another pages..
+    <div class="page" id="page3"></div>
+    <div class="page" id="page4"></div>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('.menu-links a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    
+    <link rel="stylesheet" href="script.js">
+    
+</body>
+</html>
